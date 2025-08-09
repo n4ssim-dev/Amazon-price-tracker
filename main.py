@@ -9,10 +9,12 @@ AMAZON_URL = os.getenv("AMAZON_URL")
 my_email = os.getenv('my_email')
 to_email = os.getenv('to_email')
 password = os.getenv('password')
+user_agent = os.getenv('USER-AGENT')
+accept_language = os.getenv("ACCEPT-LANGUAGE")
 
 headers = {
-    "User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0",
-    "Accept-Language" : "fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3"
+    "User-Agent" : user_agent,
+    "Accept-Language" : accept_language
 }
 
 response = requests.get(url=AMAZON_URL,headers=headers)
